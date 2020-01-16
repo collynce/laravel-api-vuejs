@@ -41,9 +41,9 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         try {
-            $user = User::where('id', '!=', auth()->id())->pluck('email', 'id');
-            $post = $this->post->newPost($request);
-            Mail::to($user)->queue(new SendMail($post));
+//            $user = User::where('id', '!=', auth()->id())->pluck('email', 'id');
+            $this->post->newPost($request);
+//            Mail::to($user)->queue(new SendMail($post));
             Log::info('Post created successfully');
         } catch (\Exception $e) {
             Log::error('An error occurred '.$e);

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Repositories;
 
 use Illuminate\Support\ServiceProvider;
@@ -16,6 +15,5 @@ class PostServiceProvider extends ServiceProvider
         );
     }
 }
-
 
 

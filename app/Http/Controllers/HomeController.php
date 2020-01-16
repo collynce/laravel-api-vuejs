@@ -32,5 +32,10 @@ class HomeController extends Controller
         $posts = Post::findOrFail($id);
         return view('layouts.blog', compact('posts'));
     }
+    public function api()
+    {
+        return view('api');
+    }
+
 
 }
